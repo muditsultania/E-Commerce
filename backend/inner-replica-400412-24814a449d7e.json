@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "inner-replica-400412",
+  "private_key_id": "24814a449d7e7c424706b6ec5e95bc04d7d164c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIshmSBUesFcBF\nVqgefUxPH/Uw1cUdCibJ+b8cw15ad8Hal+/1RbnjB2G/EQoAZCZnwRXNjy0ufvV1\nUuoXKWtZwdhyg+/uDb1hAgfTVdYQ4V1UGIqpH05A7ZUfMnAXw4P6EzMRx3949Ngc\nKoqmrtrInNF9fHlOC7m2q9e8Z2O2QQBAwTkJ/NPhdBd2Zq/sjZ3B9fOPm2DvZzsN\nhtMk0iRtr2aGHiNxpKJCP8n6ZRBznuUg4Egg6Re5mqUXD7IXtMaENK73CjmNQGO5\nFztEcaJaqLWvONu0yPQ/EIAbS+d9BG6Au62nYO2/cA4dOSRVa7sRCvKwsRKnVGdb\ntVOrEid/AgMBAAECggEAXoTKWCPWcmw4Bi/es6VNGAK0BhDXaWrLg9n0MMauHCtE\nh/+AimIRPqPOXB7ZN//yunCMJShmHfy6+0tWZhwiq74Igz4x9EpSQ2qiZtyJGaAZ\nxS5dt3K/9wItdejaM8bn1BHQvnHXTg757KH4dLHq5go8+z1xH9mT2D0sOFX09vLl\ntr47cNP+alPL37mMeUQfNhAKNVe79cz6OFINN/FiXvMSr8fBgO0ZjuRTdICB50Om\nxhftfC3ZL4jcqQKpPs76dV56uRhJDkpvtLMiA6RIKxcSCRjNkAJfx8ZvY88OIxxM\noef2SsXWtoqyLywNl+D6U8ZoPbSKQaOCor2gaVgyqQKBgQD2vfMtG9CqK1T09Usl\noJXfv4Z6z8eW4pm+g7iD+GcesRKI4hjpbQqCxv5nJhAlzdns/wsYwlMlLg1ZC3Nv\nqf9QuX6qUONa5Il6sTU4s5lGGykC3HDOex8I3UxmDq2mlral51ALOP+CijcHF0dj\n2wLEA5VJiTMZPUd1NJBxOAWelQKBgQDQOdujpachaAFXJKg3Wz+9deetUq9CWCwl\n2FMenHFOilRpKqw+iFvDZkWnmRHwDIed6x5Vvut/ub3qe18yEYrAS62EDz00aodm\ntiDfv6nSwJRInW0iNgoqu0zJ3g0KFPz5uVs+WPKBQkye3a6yAWBlPAzdFU4EgqlO\nO5yo3PXswwKBgQDgMKkydFJ9O8/+np3/+1ASM/ihwAbujsf49cACkQJJPcTEgQL3\nnS7uspZW7JvBba+0CexwO6jGYHiaTrA9Zm3oUBLJ96MMZBiSVU8xTOZYb7cstVT+\nF5qUOFcBaBbaBZjBV1JAUDLAzoq/M6SXE1kI9uR/I109cpNp6C/R34AjnQKBgAtQ\naX/N23P0O8ZpZn6DhcYcpvcC/CTlt5hi1blfFMUIvSdtuyg2ro3Ce9xsc84QUDoj\ncWWFVzR8ejZId9a3n0ttkUMQtOmpNCw/jy+5MVgTQLtlWm22c/z4ama5mwnGNCy5\nhpyvppWhbZpgP0LK0lsN1UEaDEAwfVST5qJCR1aTAoGAGLWBdxq95rNecbAfMMPE\nEJlqfksFSLLMoZR3KMOw2cYSSABsacCUaOBsQ4UB9bRGC6qLl2qJQcNupEgjF7O8\nePRSLxyL+VybQFL79OW4HlTciN15XVD2WPZ/WeTbe4uSKHEqkYJOFsbVdlC3+ymO\n5dvY7B4pHbDmIvJowZNtd6M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mudit-sultania@inner-replica-400412.iam.gserviceaccount.com",
+  "client_id": "114267630961914209692",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mudit-sultania%40inner-replica-400412.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

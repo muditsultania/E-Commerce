@@ -6,7 +6,21 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const { Storage } = require('@google-cloud/storage');
+const { format } = require('util');
 
+// Load the service account key JSON file
+const serviceKey = path.join(__dirname, 'inner-replica-400412-24814a449d7e.json');
+
+// Create a storage client
+
+const gcsStorage = new Storage({
+  keyFilename: serviceKey,
+  projectId: 'inner-replica-400412',
+});
+
+// Reference to the bucket
+const bucket = gcsStorage.bucket('e-commercemudit');
 
 app.use(express.json());
 app.use(cors());
@@ -19,28 +33,37 @@ mongoose.connect("mongodb+srv://muditsultania2002:123@cluster0.dbga2.mongodb.net
 app.get("/",(req,res)=>{
     res.send("Express App is Running")
 })
-// Image Storage Engine
-const storage = multer.diskStorage({
-    destination:'./upload/images',
-    filename:(req,file,cb)=>{
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
 
-    }
-})
-
-const upload = multer({
-    storage:storage
-})
+// Configure multer storage
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 //Creating upload end point for images
 app.use('/images',express.static('upload/images'))
 
-app.post("/upload",upload.single('product'),(req,res)=>{
-    res.json({
-        success:1,
-        image_url:`http://localhost:${port}/images/${req.file.filename}`
-    })    
-})
+app.post("/upload", upload.single('product'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send('No file uploaded.');
+  }
+
+  // Create a new blob in the bucket and upload the file data
+  const blob = bucket.file(`${Date.now().toString()}_${req.file.originalname}`);
+  const blobStream = blob.createWriteStream({
+    resumable: false,
+  });
+
+  blobStream.on('error', (err) => {
+    res.status(500).send({ message: err.message });
+  });
+
+  blobStream.on('finish', () => {
+    // The public URL can be used to directly access the file via HTTP.
+    const publicUrl = format(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
+    res.status(200).send({ success: 1, image_url: publicUrl });
+  });
+
+  blobStream.end(req.file.buffer);
+});
 
 //Schema for creating Products
 
