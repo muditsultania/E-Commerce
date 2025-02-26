@@ -6,8 +6,7 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const { log } = require("console");
-const { last } = require("firebase-tools/lib/utils");
+
 
 app.use(express.json());
 app.use(cors());
